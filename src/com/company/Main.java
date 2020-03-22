@@ -20,7 +20,6 @@ public class Main {
             try {
                 String key = iterator.next();
                 String[] arr = newDictionary.get(key);
-                newDictionary.put(key, arr);
 
                 for (String string : arr) {
                     ArrayList<String> arrayList = new ArrayList<>(arr.length);
@@ -30,6 +29,7 @@ public class Main {
                     String[] arr1 = new String[arrayList.size()];
                     arr1 = arrayList.toArray(arr1);
                     newDictionary.put(string, arr1);
+                    System.out.println("Словарь синонимов: " + string + Arrays.toString(arr1));
                 }
             } catch (Exception ex) {
             }
